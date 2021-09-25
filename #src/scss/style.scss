@@ -12,7 +12,7 @@ body {
 .header {
     &__top {
         display: grid;
-        grid-template-columns: 1fr auto;
+        grid-template-columns: 1fr 1fr 1fr;
         padding-top: 87px;
         margin-bottom: 52px;
     }
@@ -22,6 +22,7 @@ body {
             display: grid;
             grid-template-columns: 100px 99px 171px 99px;
             gap: 45px;
+            font-size: 18px;
             a {
                 display: inline-block;
                 position: relative;
@@ -53,22 +54,22 @@ body {
 
     &__login {
         position: relative;
-        padding-left: 50px;
+        padding-left: 37px;
         a {
             color: #fff;
-            background-color: var(--blue);
-            padding: 9px 44px;
+            background: linear-gradient(180deg, #fdc131 0%, #f58235 100%);
+            padding: 5px 33px;
             border-radius: 20px;
             text-transform: uppercase;
-            font-size: 20px;
+            font-size: 18px;
             line-height: 22px;
         }
         &::before {
             content: "";
-            top: -4px;
+            top: 2px;
             left: 0;
-            height: 38.5px;
-            width: 38.5px;
+            height: 28.5px;
+            width: 28.5px;
             background: url(../img/login.svg);
             position: absolute;
         }
@@ -91,6 +92,7 @@ body {
             outline: none;
             background: transparent;
             color: rgba(0, 0, 0, 0.44);
+            background: rgba(168, 165, 157, 0.36);
             &::placeholder {
                 font-size: 18px;
             }
@@ -102,12 +104,12 @@ body {
             width: 86px;
             height: 54px;
             border: 1px solid var(--black);
-            background: #c4c4c46b;
+            background: linear-gradient(180deg, #fdc131 0%, #f58235 100%);
             border-radius: 0 90px 90px 0;
             cursor: pointer;
         }
         button:before {
-            content: url(../img/search.svg);
+            content: url(../img/searchicon.svg);
             margin-left: -5px;
             margin-top: 5px;
             display: block;
@@ -183,13 +185,13 @@ body {
 .swiper {
     width: 250px;
     height: 371px;
-	&-wrapper {
-		padding-top: 44px;
-		padding-bottom: 44px;
-	}
-	&-slide {
-		height: 138px !important;
-	}
+    &-wrapper {
+        padding-top: 44px;
+        padding-bottom: 44px;
+    }
+    &-slide {
+        height: 138px !important;
+    }
 }
 
 .button-prev {
@@ -197,12 +199,12 @@ body {
 }
 
 .button-next {
-    bottom: 169px; 	
+    bottom: 169px;
 }
 
 .button-prev,
 .button-next {
-    width: 75px;	
+    width: 75px;
     height: 45px;
     z-index: 10;
     position: relative;
@@ -219,3 +221,129 @@ body {
 //     content: url(../img/next.svg);
 //     position: absolute;
 // }
+
+//---------------Регистрация
+.register {
+    background-color: #fff;
+    height: 100%;
+    &__inner {
+        padding: 95px 135px;
+    }
+    &__a {
+        display: flex;
+        grid-template-columns: 1fr 1fr;
+        justify-content: space-around;
+        margin-bottom: 60px;
+        a {
+            font-size: 34px;
+            line-height: 46px;
+            font-weight: 700;
+            color: #fe8b00;
+            letter-spacing: 0.1px;
+        }
+    }
+    &__reg {
+        border-bottom: 2px solid #fe8b00;
+    }
+    &__form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+        margin-bottom: 31px;
+        input {
+            width: 357px;
+            border: 2px solid #e8e8e8;
+            border-radius: 10px;
+            padding-left: 10px;
+            font-size: 20px;
+            padding: 15px 25px;
+            color: #000;
+            outline: #f37335;
+            &::placeholder {
+                color: #000;
+            }
+            &:focus {
+                border: 2px solid #f37335;
+            }
+        }
+    }
+    &__title {
+        font-size: 26px;
+        line-height: 36px;
+        letter-spacing: 0.2px;
+        color: #252b42;
+        margin-bottom: 5px;
+    }
+    .checkbox {
+        display: flex;
+        align-items: center;
+        font-size: 20px;
+        letter-spacing: 0.2px;
+        margin-bottom: 50px;
+        a {
+            color: var(--blue);
+            margin-right: 10px;
+        }
+    }
+
+    &__btn {
+        display: flex;
+        justify-content: space-between;
+        a {
+            padding: 16px 30px;
+            color: #fe8b00;
+            background-color: transparent;
+            border: 1px solid #f37335;
+            border-radius: 10px;
+        }
+        .reg__btn {
+            background-color: #fe8b00;
+            padding: 16px 30px;
+            color: #fff;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+    }
+}
+
+//------------Вход
+.login {
+    height: 100%;
+    background-color: #fff;
+    &__inner {
+        padding-top: 200px;
+        text-align: center;
+    }
+    &__title {
+        font-size: 40px;
+        line-height: 56px;
+        font-weight: 700;
+        letter-spacing: 0.2px;
+        color: #fe8b00;
+        margin-bottom: 90px;
+    }
+    &-mail,
+    &-password {
+        width: 528px;
+        margin: 0 auto;
+        padding: 21px 25px;
+        font-size: 15px;
+        border: 2px solid #8ec2f2;
+        border-radius: 10px;
+		margin-bottom: 44px;
+		outline: #f58235;
+		&:focus {
+			border: 2px solid #f58235
+		}
+    }
+	&-btn {
+		padding: 16px 132px;
+		background-color: #f58235;
+		font-size: 16px;
+		font-weight: 700;
+		color: #fff;
+		border-radius: 10px;
+		margin: 0 auto;
+		cursor: pointer;
+	}
+}
