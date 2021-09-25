@@ -1,11 +1,13 @@
 @import "index";
 
 body {
-    background-image: url(../img/background.jpg);
+    background-image: url(../img/background.svg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
+
+//-------ШАПКА
 
 .header {
     &__top {
@@ -67,18 +69,18 @@ body {
             left: 0;
             height: 38.5px;
             width: 38.5px;
-            background: url(../img/Vector.png);
+            background: url(../img/login.svg);
             position: absolute;
         }
     }
 
     &__bottom {
-		margin-bottom: 95px;
+        margin-bottom: 95px;
         form {
             position: relative;
             width: 480px;
             margin: 0 auto;
-			font-size: 18px;
+            font-size: 18px;
         }
         input {
             width: 100%;
@@ -106,9 +108,114 @@ body {
         }
         button:before {
             content: url(../img/search.svg);
-			margin-left: -5px;
-			margin-top: 5px;
-			display: block;
+            margin-left: -5px;
+            margin-top: 5px;
+            display: block;
         }
     }
 }
+
+//-----БАННЕР
+
+.banner {
+    &__inner {
+        display: grid;
+        grid-template-columns: 1fr auto;
+    }
+
+    &__content {
+        max-width: 700px;
+        h1 {
+            font-weight: 600;
+            font-size: 30px;
+            line-height: 42px;
+            color: #2b2b2b;
+            letter-spacing: 0.5;
+            margin-bottom: 42px;
+            span {
+                color: #f37335;
+            }
+        }
+        h4 {
+            max-width: 600px;
+            font-size: 14px;
+            line-height: 22px;
+            font-weight: 400;
+            color: var(--gray);
+            margin-bottom: 42px;
+        }
+        p {
+            font-size: 14px;
+            line-height: 22px;
+            font-weight: 400;
+            color: var(--gray);
+            margin-bottom: 66px;
+        }
+    }
+
+    &__reg {
+        a {
+            padding: 12px 30px;
+            border-radius: 10px;
+            &:not(:last-child) {
+                margin-right: 46px;
+            }
+            &:hover {
+                background: var(--blue);
+                color: #fff;
+                border: 1px solid transparent;
+                transition: all 0.3s;
+            }
+        }
+        &-children {
+            border: 1px solid transparent;
+            color: #fff;
+            background: linear-gradient(180deg, #fdc131 0%, #f58235 100%);
+        }
+        &-organization {
+            background: transparent;
+            color: var(--orange);
+            border: 1px solid var(--orange);
+        }
+    }
+}
+
+.swiper {
+    width: 250px;
+    height: 371px;
+	&-wrapper {
+		padding-top: 44px;
+		padding-bottom: 44px;
+	}
+	&-slide {
+		height: 138px !important;
+	}
+}
+
+.button-prev {
+    top: -460px;
+}
+
+.button-next {
+    bottom: 169px; 	
+}
+
+.button-prev,
+.button-next {
+    width: 75px;	
+    height: 45px;
+    z-index: 10;
+    position: relative;
+    cursor: pointer;
+    right: -82px;
+}
+
+// .button-prev::after {
+//     content: url(../img/prev.svg);
+//     position: absolute;
+// }
+
+// .button-next::after {
+//     content: url(../img/next.svg);
+//     position: absolute;
+// }
